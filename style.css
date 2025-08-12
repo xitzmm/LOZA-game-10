@@ -1,0 +1,44 @@
+
+:root{
+  --bg:#87cefa;
+  --sand:#ffe6b4;
+}
+html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+#container{position:relative;min-height:100vh;background:var(--bg);display:flex;align-items:center;justify-content:center;}
+canvas{background:transparent;display:block;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,0.2);max-width:100%;height:auto;}
+#controls{position:fixed;right:10px;bottom:40px;display:flex;flex-direction:column;gap:10px;z-index:40;}
+.control{width:64px;height:64px;border-radius:12px;border:none;background:rgba(255,255,255,0.9);font-size:28px;box-shadow:0 4px 8px rgba(0,0,0,0.15);}
+.small-btn{position:fixed;left:12px;top:12px;z-index:50;padding:8px 12px;border-radius:8px;border:none;background:rgba(255,255,255,0.95);box-shadow:0 6px 14px rgba(0,0,0,0.12);}
+#winModal.hidden{display:none;}
+#winModal{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:60;}
+#winBox{background:white;padding:20px;border-radius:12px;text-align:center;max-width:90%;}
+#winBox h2{margin:0 0 12px 0;font-size:20px;color:#222;}
+#winBox button{margin:8px;padding:10px 14px;border-radius:8px;border:none;background:#ff7b9c;color:white;font-weight:700;}
+@media (min-width:800px){
+  #controls{right:40px;bottom:80px;}
+  .control{width:72px;height:72px;font-size:32px;}
+}
+
+/* Landscape mode adjustments */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas#game {
+    width: 90vw;
+    height: auto;
+    aspect-ratio: 16/9;
+}
